@@ -1,0 +1,111 @@
+﻿1. Listing file (ls)
+
+imamibe@imamibe-Aspire-E1-471:~$ ls
+Desktop    Downloads         Music     praxis-academy  Templates  Videos
+Documents  examples.desktop  Pictures  Public          Try.java
+
+2. Listing hidden file (ls -a)
+
+imamibe@imamibe-Aspire-E1-471:~$ ls -a
+.              Documents         .mozilla        .sudo_as_admin_successful
+..             Downloads         Music           Templates
+.bash_history  examples.desktop  Pictures        .tooling
+.bash_logout   .gitconfig        .pki            Try.java
+.bashrc        .gnome            praxis-academy  Videos
+.cache         .gnupg            .profile        .vscode
+.config        .ICEauthority     Public
+Desktop        .local            .ssh
+
+3. Instaling software
+
+imamibe@imamibe-Aspire-E1-471:~$ sudo apt-get update
+[sudo] password for imamibe: 
+Ign:1 http://dl.google.com/linux/chrome/deb stable InRelease
+Hit:2 http://packages.microsoft.com/repos/vscode stable InRelease
+Hit:3 http://dl.google.com/linux/chrome/deb stable Release                     
+Hit:5 http://id.archive.ubuntu.com/ubuntu bionic InRelease                     
+Get:6 http://id.archive.ubuntu.com/ubuntu bionic-updates InRelease [88,7 kB]
+Get:7 http://id.archive.ubuntu.com/ubuntu bionic-backports InRelease [74,6 kB]
+Get:8 http://security.ubuntu.com/ubuntu bionic-security InRelease [88,7 kB]
+Fetched 252 kB in 5s (53,2 kB/s)                                     
+Reading package lists... Done
+
+4. Deleting file
+
+imamibe@imamibe-Aspire-E1-471:~$ ls
+Desktop    Downloads         Music     praxis-academy  Templates  Videos
+Documents  examples.desktop  Pictures  Public          Try.java
+imamibe@imamibe-Aspire-E1-471:~$ rm Try.java
+imamibe@imamibe-Aspire-E1-471:~$ ls
+Desktop    Downloads         Music     praxis-academy  Templates
+Documents  examples.desktop  Pictures  Public   		Videos
+
+5. cd
+
+imamibe@imamibe-Aspire-E1-471:~$ cd /home/imamibe/praxis-academy/kemampuan-dasar-1/latihan
+imamibe@imamibe-Aspire-E1-471:~/praxis-academy/kemampuan-dasar-1/latihan$ ls
+cmdline.txt  env.txt  grub.txt  kernel-linux.txt
+
+6. sudo apt-get update
+
+imamibe@imamibe-Aspire-E1-471:~$ sudo apt-get update
+[sudo] password for imamibe: 
+Hit:1 http://packages.microsoft.com/repos/vscode stable InRelease
+Ign:2 http://dl.google.com/linux/chrome/deb stable InRelease
+Hit:3 http://dl.google.com/linux/chrome/deb stable Release                     
+Get:5 http://security.ubuntu.com/ubuntu bionic-security InRelease [88,7 kB]    
+Hit:6 http://id.archive.ubuntu.com/ubuntu bionic InRelease                     
+Get:7 http://id.archive.ubuntu.com/ubuntu bionic-updates InRelease [88,7 kB]   
+Get:8 http://id.archive.ubuntu.com/ubuntu bionic-backports InRelease [74,6 kB]
+Fetched 252 kB in 3s (95,5 kB/s)   
+Reading package lists... Done
+
+7. date
+
+imamibe@imamibe-Aspire-E1-471:~$ date
+Sab Feb 29 14:21:52 WIB 2020
+
+8. echo
+
+imamibe@imamibe-Aspire-E1-471:~$ echo Hello World
+Hello World
+
+9. sudo su 
+
+imamibe@imamibe-Aspire-E1-471:~$ sudo su
+[sudo] password for imamibe: 
+root@imamibe-Aspire-E1-471:/home/imamibe# apt-get install samba
+
+10. ls -al
+
+imamibe@imamibe-Aspire-E1-471:~$ ls -al
+total 120
+drwxr-xr-x 21 imamibe imamibe 4096 Feb 29 14:08 .
+drwxr-xr-x  4 root    root    4096 Feb 29 04:27 ..
+-rw-------  1 imamibe imamibe 1689 Feb 29 14:39 .bash_history
+-rw-r--r--  1 imamibe imamibe  220 Feb 29 04:27 .bash_logout
+-rw-r--r--  1 imamibe imamibe 3771 Feb 29 04:27 .bashrc
+drwx------ 17 imamibe imamibe 4096 Feb 29 14:35 .cache
+drwx------ 21 imamibe imamibe 4096 Feb 29 14:35 .config
+drwxr-xr-x  2 imamibe imamibe 4096 Feb 29 05:14 Desktop
+drwxr-xr-x  2 imamibe imamibe 4096 Feb 29 05:14 Documents
+drwxr-xr-x  2 imamibe imamibe 4096 Feb 29 10:25 Downloads
+-rw-r--r--  1 imamibe imamibe 8980 Feb 29 04:27 examples.desktop
+-rw-r--r--  1 imamibe imamibe   63 Feb 29 11:01 .gitconfig
+drwx------  3 imamibe imamibe 4096 Feb 29 10:27 .gnome
+drwx------  3 imamibe imamibe 4096 Feb 29 05:29 .gnupg
+-rw-------  1 imamibe imamibe 2268 Feb 29 12:05 .ICEauthority
+drwx------  3 imamibe imamibe 4096 Feb 29 05:14 .local
+drwx------  5 imamibe imamibe 4096 Feb 29 05:14 .mozilla
+drwxr-xr-x  2 imamibe imamibe 4096 Feb 29 05:14 Music
+drwxr-xr-x  2 imamibe imamibe 4096 Feb 29 10:50 Pictures
+drwx------  3 imamibe imamibe 4096 Feb 29 07:40 .pki
+drwxr-xr-x  4 imamibe imamibe 4096 Feb 29 11:43 praxis-academy
+-rw-r--r--  1 imamibe imamibe  807 Feb 29 04:27 .profile
+drwxr-xr-x  2 imamibe imamibe 4096 Feb 29 05:14 Public
+drwx------  2 imamibe imamibe 4096 Feb 29 05:29 .ssh
+-rw-r--r--  1 imamibe imamibe    0 Feb 29 05:22 .sudo_as_admin_successful
+drwxr-xr-x  2 imamibe imamibe 4096 Feb 29 05:14 Templates
+drwxrwxr-x  3 imamibe imamibe 4096 Feb 29 08:00 .tooling
+drwxr-xr-x  2 imamibe imamibe 4096 Feb 29 05:14 Videos
+drwxrwxr-x  3 imamibe imamibe 4096 Feb 29 07:40 .vscode

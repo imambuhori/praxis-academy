@@ -1,0 +1,53 @@
+﻿Tentang Parameter Boot Kernel
+Dokumen ini memberikan instruksi sederhana untuk menambahkan parameter boot kernel Linux ke sistem Ubuntu menggunakan GRUB 2.
+
+Ketika disarankan untuk mencoba menggunakan parameter boot kernel tertentu, biasanya merupakan ide bagus untuk pertama-tama menambahkan parameter sementara untuk pengujian. Setelah Anda menentukan bahwa menambahkan parameter memiliki efek yang diinginkan, Anda dapat menambahkannya secara permanen. Petunjuk untuk kedua metode di bawah ini.
+
+Parameter boot kernel adalah string teks yang ditafsirkan oleh sistem untuk mengubah perilaku tertentu dan mengaktifkan atau menonaktifkan fitur tertentu. Parameter boot kernel:
+
+peka huruf besar-kecil
+terkadang hanya kata sederhana ("percikan" atau "noapic")
+
+terkadang memiliki tanda = dengan berbagai nilai yang mungkin ("acpi_backlight = vendor")
+
+terkadang menyertakan tanda baca ("i8042.noloop")
+
+Selalu masukkan parameter boot kernel persis seperti yang disarankan. Kesalahan dalam pengejaan atau pemformatan atau nilai yang tidak valid tidak akan menghasilkan pesan kesalahan apa pun, mereka hanya tidak akan berpengaruh.
+
+Daftar lengkap parameter yang didukung oleh kernel arus utama terbaru tersedia di parameter baris perintah kernel.
+
+Tambahkan Sementara Parameter Kernel Boot untuk Pengujian
+Nyalakan kembali sistem Anda, atau matikan lalu hidupkan kembali.
+Ketika sistem mulai melakukan booting berulang-ulang, ketuk tombol Esc untuk memaksa menu "GNU GRUB" muncul. Untuk mode BIOS (bukan mode UEFI), boot kunci SHIFT dapat ditekan terus menerus hingga menu muncul. Menu "GNU GRUB" akan terlihat seperti ini:
+
+https://wiki.ubuntu.com/Kernel/KernelBootParameters?action=AttachFile&do=get&target=grub2_default_menu.png
+Menu Grub memungkinkan untuk memilih antara berbagai target dan mode boot yang berbeda
+
+Jika sistem hang pada layar logo vendor awal ketika Anda menekan SHIFT, lepaskan tombol SHIFT sebentar lalu tahan lagi sampai menu "GNU GRUB" muncul.
+
+
+Setelah menu "GNU GRUB" muncul, sorot entri yang diinginkan dan tekan tombol e untuk masuk ke mode edit. Layar mode edit akan terlihat seperti ini:
+
+https://wiki.ubuntu.com/Kernel/KernelBootParameters?action=AttachFile&do=get&target=grub2_menu_editing.png
+Dengan mengedit garis linux, parameter kernel dan initrd dapat dimodifikasi hanya untuk satu boot
+
+Gunakan tombol panah bawah untuk memindahkan kursor ke baris yang dimulai dengan kata "linux", lalu tekan tombol END untuk memindahkan kursor ke akhir baris itu. Biasanya ini hanya setelah kata "quiet splash".
+
+Tekan SPACE untuk menambahkan spasi kosong (setelah "splash") lalu ketikkan parameter boot kernel yang perlu Anda tambahkan. (Jika Anda perlu menambahkan beberapa parameter, pisahkan dengan SPACE tetapi jangan tambahkan spasi sebelum atau setelah tanda = atau tanda baca apa pun dalam parameter itu sendiri).
+
+Tekan Ctrl + X untuk mem-boot sistem menggunakan parameter yang telah Anda tambahkan.
+
+Catatan: Parameter yang Anda tambahkan ke garis linux hanya bersifat sementara: Mereka akan memengaruhi sesi boot ini, tetapi begitu Anda me-restart sistem, parameter itu tidak lagi berlaku.
+
+Tambahkan Parameter Boot Kernel secara permanen
+Masuk ke sistem dan mulai jendela terminal (Aplikasi-> Aksesori-> Terminal).
+
+Di jendela terminal di $ prompt, masukkan perintah: sudo gedit / etc / default / grub
+
+Masukkan kata sandi Anda saat diminta oleh [sudo].
+Jika file / etc / default / grub tampaknya kosong atau tidak ada, lihat instruksi untuk rilis sebelumnya di atas).
+Di jendela editor, gunakan tombol panah untuk memindahkan kursor ke baris yang dimulai dengan "GRUB_CMDLINE_LINUX_DEFAULT" lalu edit baris itu, tambahkan parameter Anda ke teks di dalam tanda kutip ganda setelah kata "quiet splash". (Pastikan untuk menambahkan SPACE setelah "splash" sebelum menambahkan parameter baru Anda.) Klik tombol Simpan, lalu tutup jendela editor.
+
+Di jendela terminal di $ prompt, masukkan perintah: sudo update-grub
+
+Mulai ulang sistem.
