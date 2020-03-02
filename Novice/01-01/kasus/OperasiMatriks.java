@@ -1,4 +1,4 @@
-public class Operasimatriks{
+public class OperasiMatriks{
     public static void main (String[] args){
      
         int matriks [][] = new int[2][2];
