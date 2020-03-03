@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class MatrikKasus2{
     public static void main(String[] args){
-        int i, j, k, m, n;
+        int i, j, m, n;
         int matrik1[][] = new int[5][5];
         int matrik2[][] = new int[5][5];
         int hasil[][] = new int[5][5];
@@ -10,6 +10,9 @@ public class MatrikKasus2{
 
         System.out.print("Masukan jumlah baris matriks: ");
         m = input.nextInt();
+        if(m>5){
+            System.out.println("Baris terlalu banyak");
+        }
         System.out.print("Masukan jumlah kolom matriks: ");
         n = input.nextInt();
 
