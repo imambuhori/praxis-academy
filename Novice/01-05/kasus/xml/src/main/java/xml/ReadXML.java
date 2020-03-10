@@ -24,7 +24,7 @@ class ReadXML {
          String title = child.select("title").text();
          String author = child.select("author").text();
          String priceStr = child.select("price").text();
-         double price = Double.parseDouble(priceStr);
+         int price = Integer.parseInt(priceStr);
          Book b = new Book(title,author,price);
          books.add(b);
       }

@@ -3,21 +3,21 @@
   <book>
     <title>The Davinci Code</title>
     <author>Dan Brown</author>
-    <price>8.99</price>
+    <price>75000</price>
   </book>
   <book>
-    <title>Ender's Game</title>
-    <author>Orson Scott Card</author>
-    <price>7.95</price>
+    <title>The Lord Of the Ring</title>
+    <author>J.R.R. Talkien</author>
+    <price>89000</price>
   </book>
   <book>
-    <title>Prey</title>
-    <author>Michael Crichton</author>
-    <price>6.95</price>
+    <title>Menjerat Gus Dur</title>
+    <author>Virdika Rizky Utama</author>
+    <price>115000</price>
   </book>
   <book>
-    <title>Honor Harrington</title>
-    <author>David weber</author>
-    <price>8.75</price>
+    <title>Jonathan Strange and Mr.Norel</title>
+    <author>Suzana Clark</author>
+    <price>980000</price>
   </book>
 </bookList>

@@ -3,22 +3,22 @@
     {
       "title" : "The Davinci Code",
       "author" : "Dan Brown",
-      "price" : 8.99
+      "price" : 75000
     },
     {
-      "title" : "Ender's Game",
-      "author" : "Orson Scott Card",
-      "price" : 7.95
+      "title" : "The Lord Of the Ring",
+      "author" : "J.R.R. Talkien",
+      "price" : 89000
     },
     {
-      "title" : "Prey",
-      "author" : "Michael Crichton",
-      "price" : 6.95
+      "title" : "Menjerat Gus Dur",
+      "author" : "Virdika Rizky Utama",
+      "price" : 115000
     },
     {
-      "title" : "Honor Harrington",
-      "author" : "David Weber",
-      "price" : 8.75
+      "title" : "Jonathan Strange & Mr.Norel",
+      "author" : "Suzana Clark",
+      "price" : 98000
     }
   ]
 }
